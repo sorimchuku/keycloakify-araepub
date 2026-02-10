@@ -7,7 +7,12 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "none"
+            accountThemeImplementation: "none",
+            kcContextExclusionsFtl: `
+                <@addToXKeycloakifyMessagesIfMessageKey str="requiredFieldIndicator" />
+                <@addToXKeycloakifyMessagesIfMessageKey str="hideOptionalFields" />
+                <@addToXKeycloakifyMessagesIfMessageKey str="showOptionalFields" />
+                `
         })
     ]
 });

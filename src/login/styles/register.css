@@ -1,0 +1,91 @@
+.optional-fields-toggle-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.optional-fields-toggle-label {
+    font-size: var(--font-size-b5);
+    font-weight: var(--font-weight-r);
+    color: var(--gray-500);
+    text-align: center;
+}
+
+.optional-fields-toggle-button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    font-size: var(--font-size-b4);
+    font-weight: var(--font-weight-r);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--btn-h-2);
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.optional-fields-toggle-button::before,
+.optional-fields-toggle-button::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--gray-300);
+}
+
+.optional-fields-toggle-button .optional-fields-toggle-button-icon {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* 화살표 아이콘을 span의 ::after로 이동 */
+.optional-fields-toggle-button .optional-fields-toggle-button-icon::after {
+    content: '';
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid currentColor;
+    transition: transform 0.2s ease;
+}
+
+.optional-fields-toggle-button.expanded .optional-fields-toggle-button-icon::after {
+    transform: rotate(180deg);
+}
+
+.optional-fields-toggle-button:hover {
+    color: var(--color-primary);
+}
+
+.optional-fields-toggle-button:hover::before,
+.optional-fields-toggle-button:hover::after {
+    background-color: var(--color-primary);
+    opacity: 0.5;
+}
+
+.required-fields-section,
+.optional-fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* .kcFormClass의 gap과 동일하게 설정 */
+    width: 100%;
+}
+
+.optional-fields-container.hidden {
+    display: none;
+}
+
+/* 필수 입력 항목 라벨 옆에 메시지 추가 */
+.required-fields-section .kcLabelWrapperClass::after {
+    content: var(--msg-required-fields);
+    margin-left: -4px;
+    font-size: var(--font-size-b5);
+    font-weight: var(--font-weight-r);
+    color: var(--color-primary);
+}

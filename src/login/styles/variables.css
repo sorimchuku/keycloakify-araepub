@@ -1,0 +1,155 @@
+/* 기본 스타일 변수 common style variables */
+:root {
+  /* colors */
+  --logo-gray:	#3F4041;
+  --logo-blue:	#0255C1;
+  --color-primary:	#006EFF;
+  --color-secondary:	#00AEFF;
+
+  --color-bg:	#D4EDFF;
+  --color-bg-select:	#ACECFF;
+  --color-bg-light:	#EBF4FA;
+  --color-fg:	#1A1A1A;
+
+  --gray-500:	#797979;
+  --gray-400:	#8A8A8A;
+  --gray-300:	#DBDBDB;
+  --gray-200:	#EBECEC;
+  --gray-100:	#F8F9F9;
+
+  --color-red:	#EB5252;
+  --color-red-vivid:	#FF0000;
+  --color-orange:	#ED933F;
+  --color-orange-dark:	#FF7300;
+  --color-green:	#3AD365;
+
+  --modal-backdrop: rgba(26, 26, 26, 0.4);
+  --sidebar-backdrop: rgba(26, 26, 26, 0.2);
+
+  /* fonts */
+  /* heading size */
+  --font-size-h1: 64px;
+  --font-size-h2: 56px;
+  --font-size-h3: 48px;
+  --font-size-h4: 40px;
+  /* text size */
+  --font-size-t1: 36px;
+  --font-size-t2: 28px;
+  --font-size-t3: 24px;
+  --font-size-t4: 20px;
+  --font-size-t5: 18px;
+  --font-size-t6: 16px;
+  --font-size-t7: 14px;
+  /* button text size */
+  --font-size-b1: 24px;
+  --font-size-b2: 24px;
+  --font-size-b3: 20px;
+  --font-size-b4: 16px;
+  --font-size-b5: 14px;
+  /* label text size */
+  --font-size-l1: 12px;
+
+  /* font weight */
+  --font-weight-eb: 800;
+  --font-weight-b: 700;
+  --font-weight-sb: 600;
+  --font-weight-m: 500;
+  --font-weight-r: 400;
+
+  /* button sizes */
+  --btn-h-1: 56px;
+  --btn-h-2: 40px;
+  --btn-h-3: 36px;
+
+  /* border radius */
+  --radius-full: 9999px;
+  --radius-1: 12px;
+  --radius-2: 8px;
+  --radius-3: 6px;
+  --radius-4: 4px;
+  --radius-16: 16px;
+
+  /* spacing */
+  --padding-1: 120px;
+  --padding-2: 32px;
+  --padding-3: 24px;
+
+  /* effects */
+  --drop-shadow-1: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+  --drop-shadow-2: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  --drop-shadow-3: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  --drop-shadow-sidebar: 0 0 40px 0 rgba(0, 0, 0, 0.4);
+  --outline-shadow-1: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* tablet */
+@media (max-width: 1280px) {
+  :root {
+    /* font sizes */
+    /* heading size */
+    --font-size-h1: 50px;
+    --font-size-h2: 44px;
+    --font-size-h3: 36px;
+    --font-size-h4: 32px;
+    /* text size */
+    --font-size-t1: 30px;
+    --font-size-t2: 24px;
+    --font-size-t3: 20px;
+    --font-size-t4: 18px;
+    --font-size-t5: 18px;
+    --font-size-t6: 16px;
+    --font-size-t7: 14px;
+    /* button text size */
+    --font-size-b1: 20px;
+    --font-size-b2: 20px;
+    --font-size-b3: 18px;
+    --font-size-b4: 16px;
+    --font-size-b5: 14px;
+    /* label text size */
+    --font-size-l1: 12px;
+
+    /* button sizes */
+  --btn-h-1: 56px;
+
+    /* spacing */
+  --padding-1: 64px;
+  --padding-2: 32px;
+  --padding-3: 16px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  :root {
+    /* font sizes */
+    /* heading size */
+    --font-size-h1: 36px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 26px;
+    /* text size */
+    --font-size-t1: 24px;
+    --font-size-t2: 20px;
+    --font-size-t3: 16px;
+    --font-size-t4: 16px;
+    --font-size-t5: 16px;
+    --font-size-t6: 14px;
+    --font-size-t7: 12px;
+    /* button text size */
+    --font-size-b1: 16px;
+    --font-size-b2: 16px;
+    --font-size-b3: 16px;
+    --font-size-b4: 14px;
+    --font-size-b5: 12px;
+    /* label text size */
+    --font-size-l1: 12px;
+
+    /* button sizes */
+    --btn-h-1: 48px;
+
+      /* spacing */
+  --padding-1: 64px;
+  --padding-2: 24px;
+  --padding-3: 16px;
+  }
+}
