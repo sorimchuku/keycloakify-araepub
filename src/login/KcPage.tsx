@@ -12,6 +12,11 @@ const UserProfileFormFields = lazy(
 );
 
 const Register = lazy(() => import("./pages/Register"));
+const LoginVerifyEmail = lazy(() => import("./pages/LoginVerifyEmail"));
+const Terms = lazy(() => import("./pages/Terms"));
+const LoginResetPassword = lazy(() => import("./pages/LoginResetPassword"));
+const UpdateEmail = lazy(() => import("./pages/UpdateEmail"));
+const ErrorPage = lazy(() => import("./pages/Error"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -34,6 +39,68 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                 doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                            />
+                        );
+                    case "login-verify-email.ftl":
+                        return (
+                            <LoginVerifyEmail
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
+                            />
+                        );
+                    case "terms.ftl":
+                        return (
+                            <Terms
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
+                            />
+                        );
+                    case "login-reset-password.ftl":
+                        return (
+                            <LoginResetPassword
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
+                            />
+                        );
+                    case "login-update-password.ftl":
+                        return (
+                            <DefaultPage
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
+                                UserProfileFormFields={UserProfileFormFields}
+                                doMakeUserConfirmPassword={doMakeUserConfirmPassword}
+                            />
+                        );
+                    case "update-email.ftl":
+                        return (
+                            <UpdateEmail
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
+                            />
+                        );
+                    case "error.ftl":
+                        return (
+                            <ErrorPage
+                                kcContext={kcContext}
+                                i18n={i18n}
+                                classes={classes}
+                                Template={Template}
+                                doUseDefaultCss={false}
                             />
                         );
                     default:

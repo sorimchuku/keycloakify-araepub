@@ -16,6 +16,9 @@ export const Default: Story = {
     render: () => (
         <KcPageStory
             kcContext={{
+                locale: {
+                    currentLanguageTag: "ko"
+                },
                 message: {
                     summary: "You need to verify your email to activate your account.",
                     type: "warning"
